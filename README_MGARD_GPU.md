@@ -49,7 +49,7 @@ An object ```mgard_cuda::Handle``` needs to be created and initialized. This ini
         + ```[In] coords```: The coordinates in each dimension (from slowest to fastest).
  
 * **Step 3: Use mgard_cuda::Array.** ```mgard_cuda::Array``` is used for holding a managed array on GPU.
-     +  For ***creating*** an array. ```mgard_cuda::Array::Array<N_dims, D_type>(std::vector<size_t> shape)``` creates an manged array on GPU with ```shape```.
+     +  For ***creating*** an array. ```mgard_cuda::Array::Array<N_dims, D_type>(std::vector<size_t> shape)``` creates an managed array on GPU with ```shape```.
      +  For ***loading data*** into an array. ```void mgard_cuda::Array::loadData(D_type *data, size_t ld = 0)``` copies ```data``` into the the managed array on GPU. ```data``` can be on either on CPU or GPU. An optional ```ld``` can be provided for specifying the size of the leading dimension.
      +  For ***accessing data from CPU*** ```D_type * mgard_cuda::Array::getDataHost()``` returns a CPU pointer of the array.
      +  For ***accessing data from GPU***```D_type * mgard_cuda::Array::getDataDevice(size_t &ld)``` returns a GPU pointer of the array with the leading dimension.
