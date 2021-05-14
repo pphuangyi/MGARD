@@ -12,11 +12,13 @@ set -e
 mgard_src_dir=$(pwd)/../../
 nvcomp_build_dir=${mgard_src_dir}/external/nvcomp/build
 
+cmake=/sdcc/u/yhuang2/downloads/cmake-3.20.2/bin/cmake
+
 rm -rf build
 mkdir build 
-cmake -S .  -B ./build \
+$cmake -S .  -B ./build \
 	  -DCMAKE_MODULE_PATH=${mgard_src_dir}/cmake\
 	  -Dmgard_ROOT=${mgard_src_dir}/install\
 	  -DNVCOMP_ROOT=${nvcomp_build_dir}
 	  
-cmake --build ./build
+$cmake --build ./build
