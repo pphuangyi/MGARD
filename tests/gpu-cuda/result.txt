@@ -1,0 +1,8 @@
+
+=============================== MGARD =================================
+	Input file: data/tpc_outer_3001_2.dat
+	Absolution L-infinity error bound: 200
+	Smoothness: 0
+	Shape: ( 192 249 16 )
+
+	Loading data
